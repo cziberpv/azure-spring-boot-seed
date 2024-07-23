@@ -1,0 +1,9 @@
+config/local/
+logs/
+target/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
