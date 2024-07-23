@@ -13,23 +13,28 @@ This project demonstrates a simple GitHub Actions workflow to build and push a D
 
 The main purpose of this project is to automate the process of building and pushing Docker images to Docker Hub. By using GitHub Actions, this setup ensures that every push to the `main` branch results in a new Docker image being created and uploaded to Docker Hub with appropriate version tagging.
 
-## Required GitHub Secrets
+## Required GitHub Secrets and Variables
 
-To use this workflow, you need to configure the following secrets in your GitHub repository settings:
+To use this workflow, you need to configure the following secrets and repository variables in your GitHub repository settings:
 
-- **DOCKER_USERNAME**: Your Docker Hub username.
-- **DOCKER_PASSWORD**: Your Docker Hub password or access token.
-- **DOCKER_IMAGE_NAME**: The name of your Docker image (e.g., `my-docker-image`).
+### Secrets
+- **DOCKERHUB_USERNAME**: Your Docker Hub username.
+- **DOCKERHUB_TOKEN**: Your Docker Hub access token.
 
-### Setting up Secrets
+### Repository Variables
+- **DOCKERHUB_IMAGE_NAME**: The name of your Docker image (e.g., `my-docker-image`).
+
+### Setting up Secrets and Variables
 
 1. Go to your GitHub repository.
 2. Click on `Settings`.
 3. Navigate to `Secrets and variables` -> `Actions`.
 4. Click `New repository secret` and add the following secrets:
-    - `DOCKER_USERNAME`
-    - `DOCKER_PASSWORD`
-    - `DOCKER_IMAGE_NAME`
+   - `DOCKERHUB_USERNAME`
+   - `DOCKERHUB_TOKEN`
+5. Navigate to `Settings` -> `Secrets and variables` -> `Actions` -> `Variables`.
+6. Click `New repository variable` and add the following variable:
+   - `DOCKERHUB_IMAGE_NAME`
 
 ## Project Structure
 

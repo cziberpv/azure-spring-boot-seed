@@ -9,8 +9,36 @@
         <version>3.3.2</version>
     </parent>
 
-    <groupId>placeholder</groupId>
-    <artifactId>placeholder</artifactId>
-    <version>0.1.0</version>
+    <groupId>group-id-placeholder</groupId>
+    <artifactId>artifact-id-placeholder</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modules>
+        <module>placeholder-app</module>
+        <module>placeholder-backend</module>
+        <module>placeholder-release</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>group-id-placeholder</groupId>
+                <artifactId>placeholder-app</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>group-id-placeholder</groupId>
+                <artifactId>placeholder-backend</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

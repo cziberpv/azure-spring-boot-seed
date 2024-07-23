@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # Scan Maven dependencies
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  # Scan npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/placeholder-app"
+    schedule:
+      interval: "weekly"
